@@ -22,7 +22,7 @@
     "text",
     "element-collection"
   ],
-  "license": "https://github.com/fooloomanzoo/datetime-input/raw/master/LICENSE.txt",
+  "license": "https://github.com/fooloomanzoo/input-elements/raw/master/LICENSE.txt",
   "ignore": [
     "**/.*",
     "node_modules",
