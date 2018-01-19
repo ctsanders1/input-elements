@@ -1,0 +1,39 @@
+{
+  "name": "input-elements",
+  "version": "1.0.0",
+  "homepage": "https://github.com/fooloomanzoo/input-elements",
+  "authors": [
+    "fooloomanzoo"
+  ],
+  "description": "Elements built for improving or replacing native inputs.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fooloomanzoo/input-elements.git"
+  },
+  "keywords": [
+    "web-components",
+    "polymer",
+    "input",
+    "date",
+    "datetime",
+    "time",
+    "number",
+    "color",
+    "text",
+    "element-collection"
+  ],
+  "license": "https://github.com/fooloomanzoo/datetime-input/raw/master/LICENSE.txt",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "number-input": "fooloomanzoo/number-input#2",
+    "text-input": "fooloomanzoo/text-input#2",
+    "datetime-input": "fooloomanzoo/datetime-input#2",
+    "color-input": "fooloomanzoo/color-input#2"
+  }
+}
