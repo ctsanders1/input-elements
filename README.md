@@ -42,5 +42,5 @@ Current elements include:
 <color-input format="hsl"></color-input><br>
 <datetime-input date="1834-12-31"></datetime-input><br>
 <date-input year="1950" month="8" min="1950-08-12"></date-input><br>
-<time-input hour="8"></time-input>
+<time-input hours="8"></time-input>
 ```
