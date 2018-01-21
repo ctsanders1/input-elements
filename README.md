@@ -40,7 +40,7 @@ Current elements include:
 <text-input placeholder="type your text here..."></text-input><br>
 <number-input min="0" max="1000000" step="1000" default="12345" pad-length="8"></number-input><br>
 <color-input format="hsl"></color-input><br>
-<datetime-input date="1834-12-31"></datetime-input><br>
+<datetime-input></datetime-input><br>
 <date-input year="1950" month="8" min="1950-08-12"></date-input><br>
 <time-input hours="8"></time-input>
 ```
