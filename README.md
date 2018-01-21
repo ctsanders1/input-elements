@@ -37,10 +37,10 @@ Current elements include:
 ```
 -->
 ```html
-&lt;text-input&gt;<text-input placeholder="type your text here..."></text-input><br><br>
-&lt;number-input&gt;<number-input min="0" max="1000000" step="1000" default="12345" pad-length="8"></number-input><br><br>
-&lt;color-input&gt;<color-input format="hsl"></color-input><br><br>
-&lt;datetime-input&gt;<datetime-input></datetime-input><br><br>
-&lt;date-input&gt;<date-input year="1950" month="8" min="1950-08-12"></date-input><br><br>
-&lt;time-input&gt;<time-input hours="8"></time-input>
+text-input:&#32;<text-input placeholder="type your text here..."></text-input><br><br>
+number-input:&#32;<number-input min="0" max="1000000" step="1000" default="12345" pad-length="8"></number-input><br><br>
+color-input:&#32;<color-input format="hsl"></color-input><br><br>
+datetime-input:&#32;<datetime-input></datetime-input><br><br>
+date-input:&#32;<date-input year="1950" month="8" min="1950-08-12"></date-input><br><br>
+time-input:&#32;<time-input hours="8"></time-input>
 ```
