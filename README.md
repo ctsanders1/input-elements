@@ -1,5 +1,5 @@
 # input-elements
-Elements built for improving or replacing native inputs. The aim is to style them easier and have valid values.
+Elements built for enhancing or replacing native inputs.
 
 Current elements include:
 * `text-input`: An input for text or else, that will size automatically and can be validated.

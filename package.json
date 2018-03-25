@@ -1,0 +1,36 @@
+{
+  "name": "input-elements",
+  "version": "1.0.0",
+  "description": "customElements for enhancing or replacing native inputs",
+  "main": "input-elements.html",
+  "scripts": {
+    "postinstall": "bower install --save-dev",
+    "prepublish": "git add . && git commit -m \"publish new version\" && npm version patch  && git push",
+    "start": "polymer serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fooloomanzoo/input-elements.git"
+  },
+  "keywords": [
+    "input",
+    "picker",
+    "polymer"
+  ],
+  "author": "fooloomanzoo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fooloomanzoo/input-elements/issues"
+  },
+  "dependencies": {
+    "@polymer/polymer": "^2",
+    "@fooloomanzoo/number-input": "^2",
+    "@fooloomanzoo/text-input": "^2",
+    "@fooloomanzoo/color-input": "^2",
+    "@fooloomanzoo/datetime-input": "^2",
+    "@fooloomanzoo/datetime-picker": "^2",
+    "@fooloomanzoo/color-picker": "^2"
+  },
+  "homepage": "https://github.com/fooloomanzoo/input-elements#readme"
+}

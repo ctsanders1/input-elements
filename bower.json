@@ -5,7 +5,7 @@
   "authors": [
     "fooloomanzoo"
   ],
-  "description": "Elements built for improving or replacing native inputs.",
+  "description": "customElements for enhancing or replacing native inputs.",
   "repository": {
     "type": "git",
     "url": "git://github.com/fooloomanzoo/input-elements.git"
@@ -34,6 +34,8 @@
     "number-input": "fooloomanzoo/number-input#2",
     "text-input": "fooloomanzoo/text-input#2",
     "datetime-input": "fooloomanzoo/datetime-input#2",
-    "color-input": "fooloomanzoo/color-input#2"
+    "datetime-picker": "fooloomanzoo/datetime-picker#2",
+    "color-input": "fooloomanzoo/color-input#2",
+    "input-elements": "fooloomanzoo/input-elements"
   }
 }
