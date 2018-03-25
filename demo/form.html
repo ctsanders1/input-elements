@@ -4,23 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>color-input in iron-Form</title>
+    <title>input elements</title>
 
-    <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="../bower_components/polymer/polymer.html">
-    <link rel="import" href="../bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../bower_components/iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../bower_components/iron-form/iron-form.html">
-    <link rel="import" href="../bower_components/paper-styles/shadow.html">
-
-    <link rel="import" href="../bower_components/input-elements/input-elements.html">
+    <link rel="import" href="/bower_components/polymer/polymer.html">
+    <link rel="import" href="/bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="/bower_components/iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="/bower_components/iron-form/iron-form.html">
+    <link rel="import" href="/bower_components/input-elements/input-elements.html">
 
   </head>
   <body>
 
     <div class="vertical-section-container centered">
-      <h3>color-input in <code>iron-form</code></h3>
+      <h3>input elements in <code>iron-form</code></h3>
       <demo-snippet>
         <template>
           <dom-bind>
@@ -32,11 +30,19 @@
 
               <iron-form id="form1">
                 <form action="/foo" method="get">
-                  name: <text-input name="name" required value="Batman" placeholder="name"></text-input><br>
-                  job: <text-input name="job" auto-resize value="Hero" placeholder="job"></text-input><br>
+                  name: <text-input name="name" required value="Batman" placeholder="name"></text-input>
+                  <br>
+                  <br>
+                  job: <text-input name="job" auto-resize value="Hero" placeholder="job"></text-input>
+                  <br>
+                  <br>
                   email: <text-input name="email" required type="email" placeholder="your.name@gotham.org"></text-input>
-                  age: <integer-input name="age" required min="0" start-at="30" max="150" placeholder="age" unit="years"></integer-input><br>
-                  height: <number-input name="height" step="0.1" no-clamp start-at="180" min="0" unit="cm"></number-input><br>
+                  <br>
+                  <br>
+                  age: <integer-input name="age" required min="0" start-at="30" max="150" placeholder="age" unit="years"></integer-input>
+                  <br>
+                  <br>
+                  height: <number-input name="height" step="0.1" no-clamp start-at="180" min="0" unit="cm"></number-input>
                   <p>
                     color format:
                     <select id="formats" value="{{format::change}}">

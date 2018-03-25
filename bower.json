@@ -37,5 +37,11 @@
     "datetime-picker": "fooloomanzoo/datetime-picker#2",
     "color-input": "fooloomanzoo/color-input#2",
     "input-elements": "fooloomanzoo/input-elements"
+  },
+  "devDependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout",
+    "iron-form": "PolymerElements/iron-form",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers"
   }
 }
