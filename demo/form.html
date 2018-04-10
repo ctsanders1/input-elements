@@ -13,7 +13,15 @@
     <link rel="import" href="/bower_components/iron-demo-helpers/demo-snippet.html">
     <link rel="import" href="/bower_components/iron-form/iron-form.html">
     <link rel="import" href="/bower_components/input-elements/input-elements.html">
-
+    <custom-style>
+      <style is="custom-style">
+        /* date-picker,
+        datetime-picker {
+          --input-border-style: solid dotted;
+          --input-border-color: blue;
+        } */
+      </style>
+    </custom-style>
   </head>
   <body>
 
@@ -27,7 +35,17 @@
                 <input type="checkbox" checked onchange="form1.allowRedirect = !this.checked;">Prevent automatic form redirection
               </label>
               <br><br>
-
+              locale: <input list="locales" value="{{locale::change}}">
+              <datalist id="locales">
+                <option value="en">english</option>
+                <option value="fr">français</option>
+                <option value="de">deutsch</option>
+                <option value="es">español</option>
+                <option value="it">italiano</option>
+                <option value="ru">русский</option>
+                <option value="ja">日本語</option>
+                <option value="zh">中文</option>
+              </datalist><br><br>
               <iron-form id="form1">
                 <form action="/foo" method="get">
                   name: <text-input name="name" required value="Batman" placeholder="name"></text-input>
@@ -39,12 +57,12 @@
                   email: <text-input name="email" required type="email" placeholder="your.name@gotham.org"></text-input>
                   <br>
                   <br>
-                  age: <integer-input name="age" required min="0" start-at="30" max="150" placeholder="age" unit="years"></integer-input>
+                  age: <integer-input name="age" locale="[[locale]]" required min="0" start-at="30" max="150" placeholder="age" unit="years"></integer-input>
                   <br>
                   <br>
-                  height: <number-input name="height" step="0.1" no-clamp start-at="180" min="0" unit="cm"></number-input>
+                  height: <number-input name="height" locale="[[locale]]" step="0.1" no-clamp start-at="180" min="0" unit="cm"></number-input>
                   <p>
-                    color format:
+                    <h4>color format:</h4>
                     <select id="formats" value="{{format::change}}">
                       <option value="hex">hex</option>
                       <option value="rgb">rgb</option>
@@ -52,16 +70,29 @@
                     </select>
                     <br>
                     <br>
-                    color of the cape:  <color-text-input required name="cape" format="[[format]]"></color-text-input>
+                    color of the cape:  <color-text-input locale="[[locale]]" required name="cape" format="[[format]]"></color-text-input>
                     <br>
                     <br>
-                    color of the glasses:  <color-input required name="glasses" format="[[format]]" alpha="0.5"></color-input>
+                    color of the glasses:  <color-input locale="[[locale]]" required name="glasses" format="[[format]]" alpha="0.5"></color-input>
                   </p>
                   <p>
-                    first day: <date-picker name="first" required max="{{end}}" confirmed-value="{{start}}"></date-picker>
+                    <h4>date-input & -picker options:</h4>
+                    <input type="checkbox" checked="{{native::change}}">native picker<br>
+                    <input type="checkbox" checked="{{autoConfirm::change}}">auto confirm<br>
+                    <input type="checkbox" checked="{{withTimezone::change}}">with timezone<br>
+                    <input type="checkbox" checked="{{hour12Format::change}}">hour 12<br>
+                    <input type="checkbox" checked="{{disabled::change}}">disabled<br>
+                    step: <number-input class="step" no-clamp default="0.1" value="{{step}}"></number-input><br><br>
+                  </p>
+                  <p>
+                    first day: <date-picker name="first" required locale="[[locale]]" max="{{end}}" confirmed-value="{{start}}" native=[[native]] auto-confirm="[[autoConfirm]]" with-timezone="[[withTimezone]]" hour12-format="[[hour12Format]]" disabled="[[disabled]]"></date-picker><br>
+                    first day: <date-input name="first" required locale="[[locale]]" max="{{end}}" value="{{start}}" auto-confirm="[[autoConfirm]]" with-timezone="[[withTimezone]]" hour12-format="[[hour12Format]]" disabled="[[disabled]]"></date-input><br>
                     <br>
+                    last day: <datetime-picker name="last" locale="[[locale]]" min="{{start}}" confirmed-value="{{end}}" native=[[native]] auto-confirm="[[autoConfirm]]" with-timezone="[[withTimezone]]" hour12-format="[[hour12Format]]" disabled="[[disabled]]"></datetime-picker><br>
+                    last day: <datetime-input name="last" locale="[[locale]]" min="{{start}}" value="{{end}}" auto-confirm="[[autoConfirm]]" with-timezone="[[withTimezone]]" hour12-format="[[hour12Format]]" disabled="[[disabled]]"></datetime-input><br>
                     <br>
-                    last day: <date-picker name="last" min="{{start}}" confirmed-value="{{end}}"></date-picker>
+                    last job: <time-picker name="lastjob" locale="[[locale]]" min="{{start}}" confirmed-value="{{end}}" native=[[native]] auto-confirm="[[autoConfirm]]" with-timezone="[[withTimezone]]" hour12-format="[[hour12Format]]" disabled="[[disabled]]"></time-picker><br>
+                    last job: <time-input name="lastjob" locale="[[locale]]" min="{{start}}" value="{{end}}" auto-confirm="[[autoConfirm]]" with-timezone="[[withTimezone]]" hour12-format="[[hour12Format]]" disabled="[[disabled]]"></time-input><br>
                   </p>
                   <button onclick="form1.submit()">Submit</button>
                   <button onclick="form1.validate()">Validate</button>
