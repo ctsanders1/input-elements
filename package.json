@@ -1,6 +1,6 @@
 {
   "name": "input-elements",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "customElements for enhancing or replacing native inputs",
   "main": "input-elements.html",
   "scripts": {
