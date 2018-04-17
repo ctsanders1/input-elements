@@ -91,8 +91,11 @@
                     last day: <datetime-picker name="last" locale="[[locale]]" min="{{start}}" confirmed-value="{{end}}" native=[[native]] auto-confirm="[[autoConfirm]]" with-timezone="[[withTimezone]]" hour12-format="[[hour12Format]]" disabled="[[disabled]]"></datetime-picker><br>
                     last day: <datetime-input name="last" locale="[[locale]]" min="{{start}}" value="{{end}}" auto-confirm="[[autoConfirm]]" with-timezone="[[withTimezone]]" hour12-format="[[hour12Format]]" disabled="[[disabled]]"></datetime-input><br>
                     <br>
-                    last job: <time-picker name="lastjob" locale="[[locale]]" min="{{start}}" confirmed-value="{{end}}" native=[[native]] auto-confirm="[[autoConfirm]]" with-timezone="[[withTimezone]]" hour12-format="[[hour12Format]]" disabled="[[disabled]]"></time-picker><br>
-                    last job: <time-input name="lastjob" locale="[[locale]]" min="{{start}}" value="{{end}}" auto-confirm="[[autoConfirm]]" with-timezone="[[withTimezone]]" hour12-format="[[hour12Format]]" disabled="[[disabled]]"></time-input><br>
+                    last day: <datetime-picker name="last" min="{{start}}" confirmed-value="{{end}}"></datetime-picker>
+                    <br>
+                    <br>
+                    last job (required): <datetime-input name="lastjob" required min="[[start]]" max="[[end]]" datetime="{{lastjob}}" hour12="[[hour12]]"></datetime-input><br>
+                    return: <time-input name="return" min="[[lastjob]]" default="{{lastjob}}" max="[[end]]" hour12="[[hour12]]"></time-input><br>
                   </p>
                   <button onclick="form1.submit()">Submit</button>
                   <button onclick="form1.validate()">Validate</button>
