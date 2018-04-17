@@ -36,7 +36,7 @@
     "datetime-input": "fooloomanzoo/datetime-input#2",
     "datetime-picker": "fooloomanzoo/datetime-picker#2",
     "color-input": "fooloomanzoo/color-input#2",
-    "input-elements": "fooloomanzoo/input-elements"
+    "color-picker": "fooloomanzoo/color-picker#2"
   },
   "devDependencies": {
     "webcomponentsjs": "webcomponents/webcomponentsjs",
