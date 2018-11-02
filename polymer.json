@@ -1,0 +1,10 @@
+{
+  "sources": [
+    "input-elements.html"
+  ],
+  "lint": {
+    "rules": [
+      "polymer-2"
+    ]
+  }
+}
