@@ -5,7 +5,7 @@
   "main": "input-elements.html",
   "scripts": {
     "postinstall": "bower install --save-dev",
-    "prepublish": "git add . && git commit -m \"publish new version\" && npm version patch  && git push",
+    "prepublish": "polymer analyze > analysis.json && git add . && git commit -m \"publish new version\" && npm version patch  && git push",
     "start": "start http://localhost:8081/components/input-elements/demo/form.html && polymer serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
