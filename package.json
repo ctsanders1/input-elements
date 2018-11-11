@@ -1,5 +1,5 @@
 {
-  "name": "input-elements",
+  "name": "@fooloomanzoo/input-elements",
   "version": "3.0.0",
   "description": "customElements for enhancing or replacing native inputs",
   "main": "index.js",
