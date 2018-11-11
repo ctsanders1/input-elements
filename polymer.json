@@ -1,10 +1,12 @@
 {
+  "npm": true,
+  "modules": "node",
   "sources": [
-    "input-elements.html"
+    "index.js"
   ],
   "lint": {
     "rules": [
-      "polymer-2"
+      "polymer-3"
     ]
   }
 }

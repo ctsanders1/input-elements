@@ -1,13 +1,13 @@
 {
   "name": "input-elements",
-  "version": "1.0.3",
+  "version": "3.0.0",
   "description": "customElements for enhancing or replacing native inputs",
-  "main": "input-elements.html",
+  "main": "index.js",
   "scripts": {
-    "postinstall": "bower install --save-dev",
-    "prepublish": "polymer analyze > analysis.json && git add . && git commit -m \"publish new version\" && npm version patch  && git push",
-    "start": "start http://localhost:8081/components/input-elements/demo/form.html && polymer serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "npm run build && git add . && git commit -m \"publish new version\" && npm version patch && git push",
+    "build": "git pull && npm update && npm run analyze",
+    "start": "npm run analyze && polymer serve -o",
+    "analyze": "polymer analyze > analysis.json"
   },
   "repository": {
     "type": "git",
@@ -24,13 +24,20 @@
     "url": "https://github.com/fooloomanzoo/input-elements/issues"
   },
   "dependencies": {
-    "@polymer/polymer": "^2",
-    "@fooloomanzoo/number-input": "^2",
-    "@fooloomanzoo/text-input": "^2",
-    "@fooloomanzoo/color-input": "^2",
-    "@fooloomanzoo/datetime-input": "^2",
-    "@fooloomanzoo/datetime-picker": "^2",
-    "@fooloomanzoo/color-picker": "^2"
+    "@fooloomanzoo/color-input": "^3",
+    "@fooloomanzoo/color-picker": "^3",
+    "@fooloomanzoo/datetime-input": "^3",
+    "@fooloomanzoo/datetime-picker": "^3.0.6",
+    "@fooloomanzoo/number-input": "^3",
+    "@fooloomanzoo/text-input": "^3",
+    "@polymer/polymer": "^3"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3",
+    "@polymer/iron-flex-layout": "^3",
+    "@polymer/iron-form": "^3",
+    "@polymer/iron-test-helpers": "^3",
+    "@webcomponents/webcomponentsjs": "^2"
   },
   "homepage": "https://github.com/fooloomanzoo/input-elements#readme"
 }
